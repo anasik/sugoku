@@ -1,38 +1,117 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .App {
-  text-align: center;
+  padding: 20px;
+  width: 500px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.goku {
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(5px);
 }
-
-.App-link {
-  color: #61dafb;
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row button {
+  font-size: 14px;
+  font-weight: bold;
+  flex: 1;
+  border: 1px solid #afafaf;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-right: none;
+}
+.row button:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.row button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-right: 1px solid;
+}
+.board {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  width: 320px;
+  row-gap: 0;
+  margin: 0 auto;
+}
+.board-item {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  border: 1px solid #f37822;
+  border-top: none;
+  border-left: none;
+  border-collapse: collapse;
+}
+.border-top {
+  border-top: 2px solid #f37822;
+}
+.border-left {
+  border-left: 2px solid #f37822;
+}
+.board-item:nth-child(3n) {
+  border-right-width: 2px;
+}
+.border-bottom-thick {
+  border-bottom-width: 2px;
+}
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.solveButton {
+    background: linear-gradient(5deg, #4264fe, #05015e, #000, #05015e, #4264fe);
+}
+.solveButton:hover {
+  background: linear-gradient(5deg, #05015e, #000, #05015e, #4264fe, #05015e);
+}
+.clearButton {
+  background: black;
+}
+.randomButton {
+  background: linear-gradient(90deg, #f1a900, #e02a4e, #36a7d5);
+}
+.easyButton {
+  background: #f1a900;
+}
+.mediumButton {
+  background: #e02a4e;
+}
+.hardButton {
+  background: #36a7d5;
+}
+button {
+  background: #f37822;
+  border:  1px solid #f37822;
+  color: wheat
+}
+button:hover {
+  transform: scale(1.1);
+}
+input {
+  text-align: center;
+  border: 1px solid #f37822;
+  color: #05015e;
+}
+.inputRow input:first-of-type {
+  border-right: none;
 }
