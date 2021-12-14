@@ -49,7 +49,7 @@ function App() {
                 d?.map((e, j) =>
                   <input
                     className={"board-item " + ((i === 0) ? "border-top " : "") + ((j === 0) ? "border-left " : "") + (((i + 1) % 3 === 0) ? "border-bottom-thick" : "")}
-                    value={e}
+                    value={e? e: ''}
                     onChange={({ target }) => {
                       let copyBoard = board.map(d => d);
                       copyBoard[i][j] = parseInt(target.value)
