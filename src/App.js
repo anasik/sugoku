@@ -1,11 +1,7 @@
 import './App.css';
 import { getBoard, solve, grade, validate } from './js/helpers'
 import { useEffect, useState } from 'react';
-import logo from './gi.gif'
-import base from './goku.png'
-import ssj from './ssj.png'
-import ssb2 from './ssb2.png'
-import ssg from './ssg.png'
+import { logo, base, ssj, ssb2, ssg } from './images'
 
 function App() {
 
