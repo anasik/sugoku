@@ -1,9 +1,5 @@
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .App {
+  margin: 0 auto;
   padding: 20px;
   width: 500px;
 }
