@@ -33,7 +33,7 @@ function App() {
   useEffect(() => getBoard("medium", (x) => { setBoard(x); setLoading(false) }), [])
 
   return (
-    loading ? <img src={charging} /> :
+    loading ? <div className="App" ><div className='main'><img src={charging} style={{alignSelf: 'center'}}/></div></div> :
       <div className="App">
         <div className='goku'>
           <img src={source()} width={500} />
@@ -49,7 +49,7 @@ function App() {
                 d?.map((e, j) =>
                   <input
                     className={"board-item " + ((i === 0) ? "border-top " : "") + ((j === 0) ? "border-left " : "") + (((i + 1) % 3 === 0) ? "border-bottom-thick" : "")}
-                    value={e? e: ''}
+                    value={e ? e : ''}
                     onChange={({ target }) => {
                       let copyBoard = board.map(d => d);
                       copyBoard[i][j] = parseInt(target.value)
